@@ -130,7 +130,7 @@ class JsonRpcServiceProvider extends ServiceProvider
                 if (class_exists('\BenSampo\Enum\Enum')) {
                     $instance->addCaster(new BenSampoEnumCaster());
                 }
-                if (class_exists('\BackedEnum')) {
+                if (interface_exists('\BackedEnum')) {
                     $instance->addCaster(new BackedEnumCaster());
                 }
                 
