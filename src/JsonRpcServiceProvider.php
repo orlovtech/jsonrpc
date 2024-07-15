@@ -10,6 +10,7 @@ use Psr\SimpleCache\CacheInterface;
 use Spiral\Attributes\AnnotationReader;
 use Spiral\Attributes\AttributeReader;
 use Spiral\Attributes\Composite\MergeReader;
+use Tochka\JsonRpc\Casters\BackedEnumCaster;
 use Tochka\JsonRpc\Casters\BenSampoEnumCaster;
 use Tochka\JsonRpc\Console\RouteCache;
 use Tochka\JsonRpc\Console\RouteClear;
@@ -128,6 +129,9 @@ class JsonRpcServiceProvider extends ServiceProvider
                 $instance = new JsonRpcRequestCast();
                 if (class_exists('\BenSampo\Enum\Enum')) {
                     $instance->addCaster(new BenSampoEnumCaster());
+                }
+                if (class_exists('\BackedEnum')) {
+                    $instance->addCaster(new BackedEnumCaster());
                 }
                 
                 return $instance;

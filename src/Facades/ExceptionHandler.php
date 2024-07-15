@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * Обработчик исключений JsonRpc
- * @method static handle(\Exception $e)
+ * @method static \StdClass handle(\Exception $e)
  *
  * @see \Tochka\JsonRpc\Exceptions\ExceptionHandler
  */

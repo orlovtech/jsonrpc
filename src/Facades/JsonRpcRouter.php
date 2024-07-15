@@ -9,7 +9,7 @@ use Tochka\JsonRpc\Route\JsonRpcRouterResolver;
 
 /**
  * @method static JsonRpcRoute|null get(string $serverName, string $methodName, string $group = null, string $action = null)
- * @method static add(JsonRpcRoute $route)
+ * @method static void add(JsonRpcRoute $route)
  *
  * @see JsonRpcCacheRouter
  * @see JsonRpcRouterResolver

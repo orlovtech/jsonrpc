@@ -7,8 +7,8 @@ use Tochka\JsonRpc\Contracts\GlobalCustomCasterInterface;
 
 /**
  * @method static mixed cast(string $casterName, string $className, $value, string $fieldName)
- * @method static addCaster(GlobalCustomCasterInterface $caster)
- * @method static getCasterForClass(string $className)
+ * @method static void addCaster(GlobalCustomCasterInterface $caster)
+ * @method static string|null getCasterForClass(string $className)
  * @see \Tochka\JsonRpc\Support\JsonRpcRequestCast
  */
 class JsonRpcRequestCast extends Facade
