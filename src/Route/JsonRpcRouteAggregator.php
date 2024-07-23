@@ -84,6 +84,7 @@ class JsonRpcRouteAggregator
                 if (
                     $this->ignoreThis($reflectionMethod)
                     || in_array($reflectionMethod->getName(), $ignoredMethods, true)
+                    || Str::startsWith($reflectionMethod->getName(), '__')
                 ) {
                     continue;
                 }
