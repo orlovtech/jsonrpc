@@ -38,7 +38,7 @@ class ExceptionHandler
                 $error->data['errors'] = $e->getData();
             }
         } else {
-            $error->code = $e->getCode();
+            $error->code = (int) $e->getCode();
             $error->message = $e->getMessage();
         }
 
